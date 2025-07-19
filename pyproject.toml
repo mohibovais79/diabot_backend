@@ -1,0 +1,14 @@
+[project]
+name = "diabot-backend"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.116.1",
+    "fastembed>=0.7.1",
+    "pandas>=2.3.1",
+    "python-calamine>=0.4.0",
+    "scikit-learn>=1.7.1",
+    "uvicorn>=0.35.0",
+]
