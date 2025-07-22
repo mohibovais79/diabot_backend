@@ -1,8 +1,15 @@
 import asyncio
+import operator
+import os
+from typing import Annotated, Sequence, TypedDict
 
 import numpy as np
 import pandas as pd
+from dotenv import load_dotenv
 from fastembed import TextEmbedding
+from langchain.tools import tool
+from langchain_core.messages import BaseMessage
+from langgraph.prebuilt import create_react_agent
 from sklearn.metrics.pairwise import cosine_similarity
 
 
@@ -39,6 +46,8 @@ async def main():
     retriever = Retrieval("data.xlsx")
     answer = await retriever.get_similar_questions("can my sister get diabetes?")
     print(answer)
+
+
 
 
 if __name__ == "__main__":
